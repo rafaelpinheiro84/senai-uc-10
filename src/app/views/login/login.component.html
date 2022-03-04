@@ -1,0 +1,38 @@
+<!---Implementando formulário de login em Angular-->
+
+<div class="tela-login">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+        <h1 class="nome-login">Login</h1>
+        <br><br>
+        <label for="email">Email</label>
+        <input  type="email" id="email" name="email" placeholder="Ex.: email@mail.com" [(ngModel)]="loginModel.email" />
+        <br><br>
+        <label for="senha">Senha</label>
+        <br>
+        <input  type="password" id="password" name="senha" placeholder="Sua senha aqui" [(ngModel)]="loginModel.password" />
+        <br><br><br>
+           <button class="login-enviar" type="submit">Fazer Login</button>
+           <a href="cadastro">
+             <p class="cadastrar">Cadastre-se</p> 
+        </a>
+
+    </form>
+    <p *ngIf="mensagem != '' "> {{ mensagem }} </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

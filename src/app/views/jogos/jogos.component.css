@@ -1,0 +1,723 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    box-sizing: border-box;
+    max-width: 1366px;
+
+}
+
+ ul {
+    margin: 0px;
+    padding: 0px;
+      
+ }
+
+
+
+ a {
+     color: black;
+     text-decoration: none;
+     font-family: sans-serif;
+ }
+ li:hover {
+     background: rgba(0, 0, 0, .05);
+ }
+ #logo {
+     font-size: 1.5rem;
+     font-weight: bold;
+ }
+ header {
+     box-sizing: border-box;
+     height: 70px;
+     padding: 1rem;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background: #6C95BA;
+     
+ }
+ 
+ #menu {
+    display: flex;
+    list-style: none;
+    gap: .9rem;
+ }
+ 
+ #menu a {
+   display: block;
+   padding: .5rem;
+ }
+ #btn-mobile {
+     display: none;
+ }
+ /* responsividade menu tablet*/
+  @media  (max-width:768px) { 
+
+     #menu {
+       display: block;
+       position: absolute;
+       width: 100%;
+       top: 70px;
+       right: 0px;
+       background: #e7e7e7;
+       transition: .6s;
+       z-index: 1000;
+       height: 0px;
+       visibility: hidden;
+       overflow-y: hidden;
+     }
+     
+     #nav.active #menu {
+         height: calc(100vh - 70px);
+         visibility: visible;
+         overflow-y: auto;
+     }
+     
+     #menu a{
+         padding: 1rem 0;
+         margin: 0 1rem;
+         border-bottom: 2px solid rgba(0, 0, 0, .05);
+     }
+     #btn-mobile {
+         display: flex;
+         padding: .5rem 1rem;
+         font-size: 1rem;
+         border: none;
+         background: none;
+         cursor: pointer;
+         gap: .5rem;
+     }
+     #hamburger {
+         display: block;
+         border-top: 2px solid;
+         width: 20px; 
+     }
+     #hamburger::after, #hamburger::before  {
+         content: '';
+         display: block;
+         width: 20px;
+         height: 2px;
+         background: blue;
+         margin-top: 5px;
+         background: currentColor;
+         transition: .3s;
+         position: relative;
+     }
+     #nav.active #hamburger {
+         border-top-color: transparent;
+     }
+     #nav.active #hamburger::before {
+         transform: rotate(135deg);
+        
+     }
+     #nav.active #hamburger::after {
+         transform: rotate(-135deg);
+         top: -7px;
+    
+     }
+     .img-ps5  {
+        width: 180px;
+    }
+    .img-ps4{
+        width: 180px;
+    }
+    .img-xbox{
+        width: 180px;
+    }
+    .img-novidades{
+        width: 180px;
+    }
+    .img-promoções{
+        width: 180px;
+    }
+     
+ }
+ /*final da responsividade do menu tablet*/
+ 
+ /*começo da responsividade mobile*/
+ @media   (max-width:320px) {
+    #header {
+       position: fixed;
+        top: -2%;
+        width: 100%;
+    }
+    #login-header{
+        background-color: #6C95BA;
+        position: relative;
+    }
+    .tela-login{
+        padding: 10px;
+    }
+    .img-fluid {
+     display: none;
+    }
+
+    .barra1 h1{
+        display: none;
+    }
+    .barra2 h2{
+        display: none;
+    }
+    .ps5  {
+        margin-top: 5rem;
+    }
+    .pc {
+        margin-top: 5rem;
+    }
+    .img-pc{
+        width: 150px;
+    }
+    
+     .login-logo{
+        margin: 50px;
+    }
+    .gl {
+        width: 205px;
+        margin-left: 50px;
+    }
+    
+    .img-ps5  {
+        width: 150px;
+    }
+    .img-ps4{
+        width: 150px;
+    }
+    .img-xbox{
+        width: 150px;
+    }
+    .img-novidades{
+        width: 140px;
+    }
+    .img-promoções{
+        width: 140px;
+    }
+    
+    
+}
+
+#carrossel img {
+    width: 100%;
+    display: none;
+}
+
+.banner-ativo {
+    display: flex;
+}
+
+/*sessão novidades*/
+.barra1 {
+    background-color:#6C95BA;
+    display: flex;
+    justify-content: space-around;
+    margin-top: -3px;
+    
+}
+h1 {
+    color:#000;
+    font-size: 36px;
+    font-family: 'Roboto' , sans-serif;
+    font-size: 24px;
+}
+.novidades {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0  auto;
+    margin-left: 5%;
+    margin-top: 60px;
+    
+}
+.img-novidades{
+    max-width: 100%;
+    display: block;
+}
+
+.novidades > div {
+    flex: 1 1 250px;
+    margin: 20px;
+  
+    
+
+}
+.novidades p {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif ;
+    padding: 6px;
+    margin-left: 3px;
+}
+a {
+    list-style: none;
+    text-decoration: none;
+
+}
+.valor {
+    margin-left: 5%;
+
+}
+
+.valor:hover {
+    background-color: #ccc;
+
+}
+.btn-outline-primary {
+    float: left;
+    margin-left: 10px;
+    margin-top: 2%;
+    background: green;
+    font-weight: bolder;
+    color: #fff;
+    font-family: 'Roboto' , sans-serif;
+}
+
+.btn-outline-primary:hover {
+    color:#111;
+    background-color: transparent;
+}
+
+.barra2 {
+    background-color:#6C95BA;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+h2 {
+    color:#000;
+    font-size: 24px;
+    font-family: 'Roboto' , sans-serif;
+    
+}
+
+.promoções {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0  auto;
+    margin-left: 5%;
+}
+.img-promoções{
+    max-width: 100%;
+    display: block;
+}
+
+.promoções > div {
+    flex: 1 1 250px;
+    margin: 20px;
+   
+}
+
+.promoções p {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif ;
+    padding: 6px;
+    margin-left: 3px;
+    font-size: 16px;
+}
+/*meu roda pé*/
+footer{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background-color: #6C95BA;
+}
+.main-content{
+    display: flex;
+    margin-top: 20px;
+}
+.main-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+.box h2{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase ;
+}
+.box .content{
+    margin: 20px 0 0 0;
+    position: relative;
+}
+.box .content:after{
+    position: absolute;
+    content: '';
+    width: 15%;
+    height: 2px;
+    background: #ffffff;
+    top: -10px;
+}
+.box .content:before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+    top: -10px;
+}
+.box .content .social{
+    margin: 20px 0 0 0;
+}
+.left .content .social a{
+    padding: 0 2px;
+}
+.left .content .social a img{
+    width: 20px;
+    height: 20px;
+    background: #6C95BA;
+    color: black;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.left .content .social a img:hover{
+    background: #ffffff;
+}
+.left .content p{
+    text-align: justify;
+    color: black;
+}
+.center .content img{
+    font-size:23px;
+    background: #6C95BA;
+    width: 20px;
+    height: 20px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.center .content img:hover{
+    background: #ffffff;
+}
+center .content .text{
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 20pX;
+}
+.center .content .phone{
+    margin: 20px 0;
+}
+.center .content .msg{
+    margin-top: 20px;
+}
+.right form input, .right form textarea{
+    width: 100%;
+    font-size: 17px;
+    background: #ffffff;
+    padding-left: 10px;
+    border: 1px solid #222222;
+}
+.right form input{
+    height: 35px;
+}
+.right form input:focus,
+.right form textarea:focus{
+    outline-color: #3498db;
+}
+.right form .text{
+    font-size: 17px;
+    margin-bottom: 2px;
+    color: #656565;
+}
+.right form .btn-2 {
+    margin-top: 10px;
+}
+.right form .btn-2 button{
+    height: 40px;
+    width: 100%;
+    background: #111;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+    color: #ffffff;
+    display: inline;
+}
+.right form .btn-2 button:hover{
+    background: #ddd;
+    color: #111;
+    font-weight: bolder;
+    
+}
+.bottom .center{
+    padding: 5px;
+    font-size: 15px;
+    background: #6C95BA;
+    text-align: center;
+}
+.bottom .center span{
+    color: #656565;
+}
+.bottom .center a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.bottom .center a:hover{
+    text-decoration: underline;
+}
+
+/*responsividade roda pé*/
+@media screen and (max-width:768px){
+    footer{
+        position: relative;
+        bottom: 0px;
+        margin-top: 20px;
+        
+        
+    }
+    .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+        .main-content .box{
+            margin: 5px 0;
+
+    }
+
+}
+
+/*minha sessão de login*/
+/*.plano-1{
+    background-image: url(../img/maxresdefault\ 1.png);
+    
+
+}*/
+.nome-login{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tela-login{
+    background-color: rgba(0, 0 , 0, 0.8);
+    position: absolute;
+    top: 17rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    border-radius: 15px;
+    color: white;
+    margin-top: 30px;
+
+
+}
+.logi-nome{
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    margin-top: 10px;
+    
+}
+.senha-login{
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+.login-enviar {
+    background-color: dodgerblue;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.login-enviar:hover{
+    background-color: deepskyblue;
+}
+.cadastrar{
+    color: white;
+    margin-top: 15px;
+    
+}
+.cadastrar:hover{
+    color: deepskyblue;
+}
+
+#login-header  {
+    background: #6C95BA;
+    max-width: 100%;
+}
+.login-logo{
+    margin: 5px;
+    
+}
+
+@media screen and (max-width:768px) {
+    .tela-login{
+        position: absolute;
+     /* margin-top: 40px;*/
+        padding: 25px;
+    } 
+        .footer-login{
+         margin-top: 130%;
+         position: relative ;
+        }
+        .login-logo{
+            margin: 50px;
+            
+        }
+}
+
+/*sessão jogos ps5*/
+.img-fluid{
+    max-width: 100%;
+    padding: 0px 0;
+    margin-top: -2px;
+}
+.ps5{
+    margin-top: 5rem;
+    margin-left: 30px;
+    font-weight: bolder;
+}
+.img-ps5{
+    max-width: 100%;
+    display: block;
+    
+}
+
+.jogos-5{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+
+}
+.jogos-5 .sessão-ps5{
+    flex: 1 1 200px;
+    margin: 20px;
+
+}
+.jogos-5 p {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif ;
+    padding: 6px;
+    margin-left: 3px;
+}
+/*sessçao de jogos ps4*/
+.ps4{
+    margin-top: 30px;
+    margin-left: 30px;
+    font-weight: bolder;
+}
+.img-ps4{
+    max-width: 100%;
+    display: block;
+}
+.jogos-4{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.jogos-4 .sessão-ps4{
+    flex: 1 1 200px;
+    margin: 20px;
+
+}
+.jogos-4 p {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif ;
+    padding: 6px;
+    margin-left: 3px;
+}
+/*sessão xbox*/
+.xbox-one{
+    margin-top: 30px;
+    margin-left: 30px;
+    font-weight: bolder;
+}
+.img-xbox{
+    max-width: 100%;
+    display: block;
+}
+.jogos-one{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.jogos-one .sessão-xbox{
+    flex: 1 1 200px;
+    margin: 20px;
+
+}
+.jogos-one p {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif ;
+    padding: 6px;
+    margin-left: 3px;
+}
+
+
+/*sessão pc gaames*/
+.fundo{
+    background-color: #C4C4C4;
+}
+.pc{
+    margin-top: 5rem;
+    margin-left: 30px;
+    font-weight: bolder;
+    
+}
+.img-pc{
+    max-width: 100%;
+    display: block;
+}
+.pc-games1{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.sessão-pc{
+    flex: 1 1 200px;
+    margin: 20px;
+
+}
+.sessão-pc p {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif ;
+    padding: 6px;
+    margin-left: 3px;
+}
+/*sessão galeria */
+.galeria-1{
+    background-color: #E5E5E5;
+    
+}
+.gl{
+    max-width: 100%;
+    display: block;
+}
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+ .galeria .ft{
+    flex: 1 1 250px;
+     margin: 10px;
+     
+ }
+ .foto {
+     text-align: center;
+     margin-top: 100px;
+     text-transform: uppercase;
+ }
+ 

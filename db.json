@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "email": "thiago@mail.com",
+      "password": "$2a$10$z2mS4iKANsJd4Y.o3qbLJuTxgVuUl1z0jzpansHs73a.OlbvNkBse",
+      "id": 1
+    }
+
+
+  ],
+  "novidades": [
+    {
+      "titulo": "Fifa22",
+      "preco": "R$ 300",
+      "imagem": "assets/img/fifa22.png",
+      "id": 1
+    },
+    {
+      "titulo": "pc gamer",
+      "preco": "R$ 4.500",
+      "imagem": "/assets/img/pc-gamer.png ",
+      "id": 2
+    },
+    {
+      "titulo": "Console Playstation 5 Ps5",
+      "preco": " R$ 5.999",
+      "imagem": " /assets/img/ps5.png",
+      "id": 3
+    }
+  ]
+}

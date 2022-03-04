@@ -1,0 +1,160 @@
+
+<div>
+    <img  src="../assets/img/banner.png" class="img-fluid" >
+</div>
+<div class="barra1">
+    <h1 >Novidades</h1>
+</div>
+
+
+
+
+<section class="novidades">
+    <div *ngFor="let novidades of listaNovidades" >
+        <img class="img-novidades" [src]="novidades.imagem" alt=" ">
+        <a href="">
+            <p>{{ novidades.titulo}}</p>
+        </a>
+        <a class="valor" href="home"> {{ novidades.preco}}</a>
+        <div class="botões">
+          <a href="">  <button type="button" class="btn btn-outline-primary click">
+                comprar
+            </button></a>
+        </div>
+        <div class="botões">
+           <a href="#"><button onclick="contarProdutos()" type="button" class="btn btn-outline-primary click">
+                adicionar
+            </button></a>
+        </div>
+    </div> 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!--- <div>
+        <img class="img-novidades" src="../assets/img/fifa22.png" alt=" ">
+        <a href="">
+            <p>Fifa 22</p>
+        </a>
+        <a class="valor" href="home"> R$ 300</a>
+        <div class="botões">
+          <a href="">  <button type="button" class="btn btn-outline-primary click">
+                comprar
+            </button></a>
+        </div>
+        <div class="botões">
+           <a href="#"><button onclick="contarProdutos()" type="button" class="btn btn-outline-primary click">
+                adicionar
+            </button></a>
+        </div>
+    </div> 
+
+    <div>
+        <img class="img-novidades"  src="../assets/img/pc-gamer.png" alt=" ">
+        <a href="#">
+            <p> pc gamer</p>
+        </a>
+        <a class="valor" href="">R$ 4.500</a>
+        <div class="botões">
+          <a href="">  <button type="button" class="btn btn-outline-primary click">
+                comprar
+            </button></a>
+        </div>
+        <div class="botões">
+           <a href="#"><button onclick="contarProdutos()"  type="button" class="btn btn-outline-primary click">
+                adicionar
+            </button></a>
+        </div>
+    </div>
+    <div>
+        <img class="img-novidades"  src="../assets/img/ps5.png" alt="">
+        <a href="">
+            <p>Console Playstation 5 Ps5</p>
+        </a>
+        <a class="valor" href="#"> R$ 5.999</a>
+        <div class="botões">
+           <a href=""> <button type="button" class="btn btn-outline-primary click">
+                comprar
+            </button></a>
+        </div>
+        <div class="botões">
+            <a href="#"><button onclick="contarProdutos()"  type="button" class="btn btn-outline-primary click">
+                adicionar
+            </button></a>
+        </div>
+    </div>
+</section>
+<div class="barra2">
+    <h2>Promoções</h2>
+
+</div>
+<section class="promoções">
+    <div>
+        <img class="img-promoções" src="../assets/img/callofduty.png" alt=" ">
+        <a href="">
+            <p>Call of Duty Black</p>
+        </a>
+        <a class="valor" href="home">R$200</a>
+        <div class="botões">
+           <a href=""><button type="button" class="btn btn-outline-primary click">
+                comprar
+            </button></a>
+        </div>
+        <div class="botões">
+            <a href="#"><button onclick="contarProdutos()"  type="button" class="btn btn-outline-primary click">
+                adicionar
+            </button></a>
+        </div>
+    </div>
+    <div>
+        <img class="img-promoções" src="../assets/img/ps4.png" alt=" ">
+        <a href="">
+            <p>PlayStation 4</p>
+        </a>
+        <a class="valor" href="">R$ 2.500</a>
+        <div class="botões">
+            <a href=""> <button type="button" class="btn btn-outline-primary click">
+            comprar
+        </button></a>
+        </div>
+        <div class="botoões">
+            <a href="#"><button onclick="contarProdutos()"  type="button" class="btn btn-outline-primary click">
+                adicionar
+            </button></a>
+
+        </div>
+    </div>
+    <div>
+        <img class="img-promoções" src="../assets/img/cadeira-gamer.png" alt=" ">
+        <a href="">
+            <p>cadeira gamer</p>
+        </a>
+        <a class="valor" href="">R$689</a>
+        <div class="botões">
+            <a href=""><button onclick="contarProdutos()"  type="button" class="btn btn-outline-primary click">
+                comprar
+            </button></a>
+
+        </div>
+        <div class="botões">
+            <a href="#"><button onclick="contarProdutos()"  type="button" class="btn btn-outline-primary click">
+                adicionar
+            </button></a>
+        </div>
+    </div>-->
+</section>
+<app-footer></app-footer>
+
+
